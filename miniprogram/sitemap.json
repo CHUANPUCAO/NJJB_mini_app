@@ -1,0 +1,9 @@
+{
+  "desc": "Do not index this prototype",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Nanjie Bar local prototype",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "",
+  "projectname": "nanjie-bar",
+  "setting": {
+    "es6": true,
+    "minified": true
+  }
+}

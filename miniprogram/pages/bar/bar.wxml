@@ -1,0 +1,20 @@
+<view class="page">
+ <view class="eyebrow">BEIJING / SANLITUN</view>
+ <view class="title">A night at Nanjie.</view>
+ <view class="subtitle">Your bar. Your people.</view>
+ <view class="notice">LOCAL DEMO · Sample layout and fictional guests</view>
+ <view class="floors"><button wx:for="{{floors}}" wx:key="id" class="floor {{floorIndex === index ? 'active' : ''}}" data-index="{{index}}" bindtap="switchFloor">{{item.name}}</button></view>
+ <view id="room" class="room" bindtap="move">
+  <view wx:for="{{floor.objects}}" wx:key="id" class="object {{item.type}}" style="left:{{item.x}}%;top:{{item.y}}%;width:{{item.w}}%;height:{{item.h}}%;" data-id="{{item.id}}" catchtap="inspect">{{item.label}}<view wx:if="{{item.type === 'table'}}" class="chair left"></view><view wx:if="{{item.type === 'table'}}" class="chair right"></view></view>
+  <view wx:for="{{guests}}" wx:key="id" class="person" style="left:{{item.x}}%;top:{{item.y}}%;" data-id="{{item.id}}" catchtap="selectGuest"><view class="face">{{item.initial}}</view><text>{{item.name}}</text></view>
+  <view class="person self" style="left:{{me.x}}%;top:{{me.y}}%;"><view class="face">YOU</view><text>You</text></view>
+ </view>
+ <view class="hint">Tap empty floor to move · Tap a guest to meet</view>
+ <view class="card" wx:if="{{selected}}">
+  <view class="card-title">Meet {{selected.name}}</view><view class="hint">Fictional guest · Messages stay in this demo screen</view>
+  <view class="actions"><button bindtap="like">{{liked[selected.id] ? '♥ Liked' : '♡ Give a like'}}</button><button bindtap="gift">Offer a drink</button></view>
+  <view wx:for="{{messages}}" wx:key="id" class="message">You: {{item.text}}</view>
+  <input value="{{draft}}" bindinput="input" maxlength="200" placeholder="Try a greeting…" placeholder-class="placeholder"/><button class="send" bindtap="send">Try message locally</button>
+ </view>
+ <view class="card" wx:else><view class="card-title">Start with a hello.</view><view class="subtitle">Choose a guest on the map to explore the social demo.</view></view>
+</view>

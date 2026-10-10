@@ -1,0 +1,1 @@
+page { background: #11141c; color: #f5efdf; font-family: sans-serif; } button::after { border: none; } button { font-size: 26rpx; }

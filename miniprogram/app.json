@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/bar/bar"
+  ],
+  "window": {
+    "navigationBarTitleText": "NANJIE · 南街",
+    "navigationBarBackgroundColor": "#171b26",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#11141c"
+  },
+  "sitemapLocation": "sitemap.json"
+}
